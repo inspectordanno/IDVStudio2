@@ -233,7 +233,15 @@ a:active {
     color: orangered;
     }
 
+p {
+  font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
 
+#map{
+  
+}
 
 
 /* Footer
