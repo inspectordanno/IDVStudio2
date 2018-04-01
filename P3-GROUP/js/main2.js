@@ -89,7 +89,7 @@ var yScale = d3.scaleLinear()
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 /* Add SVG */
-var svg2 = d3.select("#charts").append("svg")
+var svg2 = d3.select("#chart2").append("svg")
   .attr("width", (width+margin)+"px")
   .attr("height", (height+margin)+"px")
   .append('g')
