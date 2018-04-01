@@ -51,7 +51,7 @@ var data = [
 
 
 var width = 700;
-var height = 200;
+var height = 300;
 var margin = 50;
 var duration = 250;
 
@@ -83,7 +83,7 @@ var xScale = d3.scaleTime()
   .range([0, width-margin]);
 
 var yScale = d3.scaleLinear()
-  .domain([1000, d3.max(data[0].values, d => d.price)])
+  .domain([1000, d3.max(data[2].values, d => d.price)])
   .range([height-margin, 0]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -160,7 +160,7 @@ lines.selectAll("circle-group")
         .style("cursor", "pointer")
         .append("text")
         .attr("class", "text")
-        .text(`${d.price}`)
+        .text("$" + `${d.price}`)
         .attr("x", d => xScale(d.date) + 5)
         .attr("y", d => yScale(d.price) - 10);
     })
@@ -207,3 +207,20 @@ svg.append("g")
   .attr("transform", "rotate(-90)")
   .attr("fill", "#000")
   .text("Average Rent Price");
+
+  svg.append("text")
+    .attr("y", -25)
+    .attr("x", -50)
+    .style("font-size", "18px")
+    .attr("transform", "rotate(0)")
+    .attr("fill", "#000")
+    .text("Average Rent Price (1 Bedroom)");
+
+
+
+
+
+
+
+
+    // d3.js line graph source: codepen.io

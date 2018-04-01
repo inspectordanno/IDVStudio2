@@ -1,57 +1,57 @@
-var data = [
+var data2 = [
   {
     name: "5% Increase",
     values: [
-      {date: "2013", price:	"1365"},
-      {date: "2014", price:	"1512"},
-      {date: "2015", price:	"1689"},
-      {date: "2016", price:	"1886"},
-      {date: "2017", price:	"1935"},
-      {date: "2018", price:	"2032"},
-      {date: "2019", price:	"2133"},
-      {date: "2020", price:	"2240"},
-      {date: "2021", price:	"2352"},
-      {date: "2022", price:	"2470"},
-      {date: "2023", price:	"2593"},
+      {date: "2013", price:	"1912"},
+      {date: "2014", price:	"2109"},
+      {date: "2015", price:	"2230"},
+      {date: "2016", price:	"2451"},
+      {date: "2017", price:	"2637"},
+      {date: "2018", price:	"2769"},
+      {date: "2019", price:	"2907"},
+      {date: "2020", price:	"3053"},
+      {date: "2021", price:	"3205"},
+      {date: "2022", price:	"3366"},
+      {date: "2023", price:	"3534"},
     ]
   },
   {
     name: "10% Increase",
     values: [
-      {date: "2013", price:	"1365"},
-      {date: "2014", price:	"1512"},
-      {date: "2015", price:	"1689"},
-      {date: "2016", price:	"1886"},
-      {date: "2017", price:	"1935"},
-      {date: "2018", price:	"2129"},
-      {date: "2019", price:	"2341"},
-      {date: "2020", price:	"2575"},
-      {date: "2021", price:	"2833"},
-      {date: "2022", price:	"3116"},
-      {date: "2023", price:	"3428"},
+      {date: "2013", price:	"1912"},
+      {date: "2014", price:	"2109"},
+      {date: "2015", price:	"2230"},
+      {date: "2016", price:	"2451"},
+      {date: "2017", price:	"2637"},
+      {date: "2018", price:	"2901"},
+      {date: "2019", price:	"3191"},
+      {date: "2020", price:	"3510"},
+      {date: "2021", price:	"3861"},
+      {date: "2022", price:	"4247"},
+      {date: "2023", price:	"4672"},
     ]
   },
   {
     name: "15% Increase",
     values: [
-      {date: "2013", price:	"1365"},
-      {date: "2014", price:	"1512"},
-      {date: "2015", price:	"1689"},
-      {date: "2016", price:	"1886"},
-      {date: "2017", price:	"1935"},
-      {date: "2018", price:	"2225"},
-      {date: "2019", price:	"2559"},
-      {date: "2020", price:	"2943"},
-      {date: "2021", price:	"3384"},
-      {date: "2022", price:	"3892"},
-      {date: "2023", price:	"4476"},
+      {date: "2013", price:	"1912"},
+      {date: "2014", price:	"2109"},
+      {date: "2015", price:	"2230"},
+      {date: "2016", price:	"2451"},
+      {date: "2017", price:	"2637"},
+      {date: "2018", price:	"3033"},
+      {date: "2019", price:	"3487"},
+      {date: "2020", price:	"4011"},
+      {date: "2021", price:	"4612"},
+      {date: "2022", price:	"5304"},
+      {date: "2023", price:	"6100"},
     ]
   }
 ];
 
 
 var width = 700;
-var height = 200;
+var height = 300;
 var margin = 50;
 var duration = 250;
 
@@ -69,7 +69,7 @@ var circleRadiusHover = 6;
 
 /* Format Data */
 var parseDate = d3.timeParse("%Y");
-data.forEach(function(d) {
+data2.forEach(function(d) {
   d.values.forEach(function(d) {
     d.date = parseDate(d.date);
     d.price = +d.price;
@@ -79,17 +79,17 @@ data.forEach(function(d) {
 
 /* Scale */
 var xScale = d3.scaleTime()
-  .domain(d3.extent(data[0].values, d => d.date))
+  .domain(d3.extent(data2[0].values, d => d.date))
   .range([0, width-margin]);
 
 var yScale = d3.scaleLinear()
-  .domain([1000, d3.max(data[0].values, d => d.price)])
+  .domain([1500, d3.max(data2[2].values, d => d.price)])
   .range([height-margin, 0]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 /* Add SVG */
-var svg2 = d3.select("#chart2").append("#svg")
+var svg2 = d3.select("#charts").append("svg")
   .attr("width", (width+margin)+"px")
   .attr("height", (height+margin)+"px")
   .append('g')
@@ -101,15 +101,15 @@ var line = d3.line()
   .x(d => xScale(d.date))
   .y(d => yScale(d.price));
 
-let lines = svg.append('g')
-  .attr('class', 'lines');
+let lines2 = svg2.append('g')
+  .attr('class', 'lines2');
 
-lines.selectAll('.line-group')
-  .data(data).enter()
+lines2.selectAll('.line-group')
+  .data(data2).enter()
   .append('g')
   .attr('class', 'line-group')
   .on("mouseover", function(d, i) {
-      svg.append("text")
+      svg2.append("text")
         .attr("class", "title-text")
         .style("fill", color(i))
         .text(d.name)
@@ -118,7 +118,7 @@ lines.selectAll('.line-group')
         .attr("y", 5);
     })
   .on("mouseout", function(d) {
-      svg.select(".title-text").remove();
+      svg2.select(".title-text").remove();
     })
   .append('path')
   .attr('class', 'line')
@@ -147,8 +147,8 @@ lines.selectAll('.line-group')
 
 
 /* Add circles in the line */
-lines.selectAll("circle-group")
-  .data(data).enter()
+lines2.selectAll("circle-group")
+  .data(data2).enter()
   .append("g")
   .style("fill", (d, i) => color(i))
   .selectAll("circle")
@@ -160,7 +160,7 @@ lines.selectAll("circle-group")
         .style("cursor", "pointer")
         .append("text")
         .attr("class", "text")
-        .text(`${d.price}`)
+        .text("$" + `${d.price}`)
         .attr("x", d => xScale(d.date) + 5)
         .attr("y", d => yScale(d.price) - 10);
     })
@@ -194,12 +194,12 @@ lines.selectAll("circle-group")
 var xAxis = d3.axisBottom(xScale).ticks(10);
 var yAxis = d3.axisLeft(yScale).ticks(10);
 
-svg.append("g")
+svg2.append("g")
   .attr("class", "x axis")
   .attr("transform", `translate(0, ${height-margin})`)
   .call(xAxis);
 
-svg.append("g")
+svg2.append("g")
   .attr("class", "y axis")
   .call(yAxis)
   .append('text')
@@ -207,3 +207,20 @@ svg.append("g")
   .attr("transform", "rotate(-90)")
   .attr("fill", "#000")
   .text("Average Rent Price");
+
+  svg2.append("text")
+    .attr("y", -25)
+    .attr("x", -50)
+    .style("font-size", "18px")
+    .attr("transform", "rotate(0)")
+    .attr("fill", "#000")
+    .text("Average Rent Price (3 Bedroom)");
+
+
+
+
+
+
+
+
+// d3.js line graph source: codepen.io

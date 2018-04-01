@@ -27,9 +27,14 @@ a:hover
 
 }
 
-svg {
-    font-family: Sans-Serif, Arial;
+#svg {
+    font-family: "BentonSansCond-Regular","Helvetica-Bold",sans-serif;
 }
+
+#svg2 {
+    font-family: "BentonSansCond-Regular","Helvetica-Bold",sans-serif;
+}
+
 .line {
   stroke-width: 2;
   fill: none;
