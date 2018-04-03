@@ -1,0 +1,64 @@
+<table class="tg">
+  <tr>
+    <th class="leftcol"><font class="EB1small">East Boston</font></th>
+    <th class="centcol"></th>
+    <th class="trighcol"><font class="B1small"> Boston</font></th>
+  </tr>
+  <tr>
+
+    <th class="leftcol">
+      <font class="EB1big">44,989</font><br>
+      <font class="EB1small">residents per grocery store</font>
+    </th>
+
+    <th class="centcol">
+      <img class="mobiHide" width="50%" src="https://www.stephencosta.co/wp-content/uploads/2018/03/P2Icons-01.svg">
+    </th>
+    <th class="rightcol">
+      <font class="B1big">15,705</font><br>
+      <font class="B1small">residents per grocery store</font>
+    </th>
+  </tr>
+
+  <tr>
+    <th class="leftcol">
+      <font class="EB1big">2</font><br>
+      <font class="EB1small">farmers markets</font>
+    </th>
+    <th class="centcol">
+      <img class="mobiHide" width="50%" src="https://www.stephencosta.co/wp-content/uploads/2018/03/P2Icons-02.svg">
+    </th>
+    <th class="rightcol">
+      <font class="B1big">13</font><br>
+      <font class="B1small">farmers markets</font>
+    </th>
+  </tr>
+
+  <tr>
+    <th class="leftcol">
+      <font class="EB1big">57%</font><br>
+      <font class="EB1small">of restaurants are <br>take out or "fast food"</font>
+    </th>
+    <th class="centcol">
+      <img class="mobiHide" width="50%" src="https://www.stephencosta.co/wp-content/uploads/2018/03/P2Icons-03.svg">
+    </th>
+    <th class="rightcol">
+      <font class="B1big">43%</font><br>
+      <font class="B1small">of restaurants are <br>take out or "fast food"</font>
+    </th>
+  </tr>
+
+  <tr>
+    <th class="leftcol">
+      <font class="EB1big">93</font><br>
+      <font class="EB1small">establishments serve <br>or sell alcohol</font>
+    </th>
+    <th class="centcol">
+      <img class="mobiHide" width="50%" src="https://www.stephencosta.co/wp-content/uploads/2018/03/P2Icons-04.svg">
+    </th>
+    <th class="rightcol">
+      <font class="B1big">39</font><br>
+      <font class="B1small">per neighborhood <br>serve/sell alcohol</font>
+    </th>
+  </tr>
+</table>
