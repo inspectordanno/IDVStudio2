@@ -27,6 +27,41 @@ a:hover
 
 }
 
+font.B1big {
+    font-size: 5rem;
+    line-height: 7rem;
+    font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+    color: #1b75bc;
+}
+
+font.EB1big {
+  font-size: 5rem;
+  line-height: 7rem;
+  font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+  color: #44a349;
+}
+
+font.B1big {
+  font-size: 5rem;
+  line-height: 7rem;
+  font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+  color: #1b75bc;
+}
+
+font.EB2big {
+  font-size: 5rem;
+  line-height: 7rem;
+  font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+  color: #d91376;
+}
+
+font.B2big {
+  font-size: 5rem;
+  line-height: 7rem;
+  font-family: "BentonSansCond-Regular","Helvetica",sans-serif;
+  color: #5657b6;
+}
+
 #svg {
     font-family: "BentonSansCond-Regular","Helvetica-Bold",sans-serif;
 }
@@ -240,7 +275,7 @@ p {
 }
 
 #map{
-  
+
 }
 
 
