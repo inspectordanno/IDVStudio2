@@ -1,1 +1,1 @@
-# This is a project I am working on visualizing rent affordability in East Boston.
+## This was a group project where we investigated what would happen to the East Boston economy if Amazon HQ2 moved in.
